@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+<!-- {% block title %}
+    Gallery
+{% endblock title%} -->
+{% block content %}
+<div class="gallrey">
+   <div class="container">
+        <div class="row">
+            {% for product in products %}
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ product.Image.url }}" alt="{{ product.name }}" style="width: 50%; height: 20%;">
+                        <div class="card-body text-center">
+                          <h5 class="card-title">{{product.name}}</h5>
+                          <a href="/detail/{{product.slug}}" class="btn btn-danger">اضغط للتفاصيل</a>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+   </div>
+</div>
+{% endblock content %}

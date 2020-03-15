@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+{% load static  %}
+{% block content %}
+
+<div class="sub">
+   <div class="container">
+       <div class="row">
+           {% for subtwo in subtwocategories %}
+           <div class="col-md-4">
+                <div class="card" style="width: 15rem;">
+                    <div class="card-body text-center">
+                        <a href="/photo/{{subtwo.slug}}">{{subtwo.name}}</a>
+                    </div>
+                </div>
+           </div>
+           {% endfor %}
+       </div>
+   </div>
+</div>
+
+{% endblock %}
+

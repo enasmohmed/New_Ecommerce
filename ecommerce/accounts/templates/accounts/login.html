@@ -1,0 +1,16 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block content %}
+   <div class="login text-right">
+       <div class="container">
+          <div class="login-body">
+                <h2>تسجيل الدخول </h2>
+                <form  method="POST" action="{% url 'home' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">دخول</button>
+                </form>
+          </div>
+       </div>
+   </div>
+{% endblock content %}

@@ -1,0 +1,487 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fabulous is a creative, clean, fully responsive, powerful and multipurpose HTML Template with latest website trends. Perfect to all type of fashion stores.">
+    <meta name="keywords" content="HTML,CSS,womens clothes,fashion,mens fashion,fashion show,fashion week">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="JTV">
+    <title>Ecommerce Shopping</title>
+    <!-- Favicons Icon -->
+    <link rel="icon" href='{% static "img/images/img/LOGO3.png" %}' type="image/x-icon" />
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href='{% static "css/styles.css" %}' media="all">
+    <!-- <link rel="stylesheet" href='{% static "css/revslider.css" %}'> -->
+</head>
+<body class="cms-index-index cms-home-page">
+  <div id="page"> 
+   <!-- Header -->
+   <header>
+    <div class="header-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 col-xs-12">
+            <div class="logo"><a title="ecommerce Template" href="index.html"><img alt="ecommerce Template" src='{% static "img/images/img/Logo2.jpg" %}' style="width: 68%; margin-left: 16%;margin-bottom: -16px;"></a></div>
+            <div class="nav-icon">
+              <div class="mega-container visible-lg visible-md visible-sm">
+                <div class="navleft-container">
+                  <div class="mega-menu-title">
+                    <h3><i class="fa fa-navicon"></i>Categories</h3>
+                  </div>
+                  <div class="mega-menu-category">
+                    <ul class="nav">
+                      <li><a href="index.html">Home</a></li>
+                      {% for cat  in categories %}
+                      {% if category.slug == cat.slug %}
+                      {% endif %}
+                      <li><a href="{{cat.get_absolute_url}}">{{cat.name}}</a>
+                        <div class="wrap-popup">
+                          <div class="popup">
+                            <div class="row">
+                              {% for sub in subcategories %}
+                              <div class="col-md-4 col-sm-6">
+                                <h3><a href="/sub{{cat.get_absolute_url}}">{{sub.name}}</a></h3>
+                                {% for subtwo in subtwocategories %}
+                                <ul class="nav">
+                                  <li><a href="/subtwo{{cat.get_absolute_url}}">{{subtwo.name}}</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Sarees</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Kurta & kurti</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Dress materials</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Salwar kameez sets</a></li>
+                                </ul>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </li>
+                      {% endfor %}
+                      <li><a href="#">Page</a>
+                        <div class="wrap-popup">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <ul class="nav">
+                                  <li><a href="shop-grid.html"><span>Shop Grid</span></a></li>
+                                  <li><a href="shop-grid-sidebar.html"><span>Shop Grid Sidebar</span></a></li>
+                                  <li><a href="shop-list.html"><span>Shop List</span></a></li>
+                                  <li><a href="shop-list-sidebar.html"><span>Shop List Sidebar</span></a></li>
+                                  <li><a href="product-detail.html"><span>Product Detail</span></a></li>
+                                  <li><a href="product-detail-sidebar.html"><span>Product Detail Sidebar</span></a></li>
+                                  <li><a href="shopping-cart.html"><span>Shopping Cart</span></a></li>
+                                </ul>
+                              </div>
+                              <div class="col-sm-4">
+                                <ul class="nav">
+                                  <li><a href="checkout.html"><span>Checkout</span></a></li>
+                                  <li><a href="wishlist.html"><span>Wishlist</span></a></li>
+                                  <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+                                  <li><a href="compare.html"><span>Compare</span></a></li>
+                                  <li><a href="quick-view.html"><span>Quick View</span></a></li>
+                                  <li><a href="complete-order.html">Complete Order</a></li>
+                                  <li><a href="my-account-information.html">Account Information</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-sm-4">
+                                <ul class="nav">
+                                  <li><a href="faq.html"><span>FAQ</span></a></li>
+                                  <li><a href="sitemap.html"><span>Sitemap</span></a></li>
+                                  <li><a href="track-order.html"><span>Track Order</span></a></li>
+                                  <li><a href="register-ac.html"><span>Register Account</span></a></li>
+                                  <li><a href="forgot-password.html"><span>Forgot Password</span></a></li>
+                                  <li><a href="team.html"><span>Team</span></a></li>
+                                  <li><a href="404error.html"><span>404 Error Page</span></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- <li><a href="#">Men's</a>
+                        <div class="wrap-popup">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-md-4 col-sm-6">
+                                <h3><a href="shop-grid-sidebar.html">Clothing</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">T-Shirts</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Shirts</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Trousers</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Sleep Wear</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">Shoes</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Flat Shoes</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Flat Sandals</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Boots</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Heels</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-4 col-sm-6 has-sep">
+                                <h3><a href="shop-grid-sidebar.html">Jwellery</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Bracelets</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Necklaces &amp; Pendent</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Pendants</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Pins &amp; Brooches</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">Watches</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Fastrack</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Casio</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Sonata</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Maxima</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-md-4 has-sep hidden-sm">
+                                <div class="custom-menu-right">
+                                  <div class="box-banner media">
+                                    <div class="add-right"><a href="#"><img src='{% static "img/images/jtv-menu-banner1.jpg" %}' class="img-responsive" alt="New Arrive"></a></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                            <a href="#" class="ads"><img src='{% static "img/images/jtv-menu-banner4.jpg" %}' alt="Mega Sale" class="img-responsive"></a> </div>
+                        </div>
+                      </li> -->
+                    
+                      <!-- <li class="nosub"><a href="shop-grid-sidebar.html">Kids</a></li> -->
+                      <!-- <li class="nosub"><a href="shop-grid-sidebar.html">Accessories</a></li> -->
+                      <!-- <li><a href="blog.html">Blog</a>
+                        <div class="wrap-popup column1">
+                          <div class="popup">
+                            <ul class="nav">
+                              <li><a href="blog.html">Blog</a></li>
+                              <li><a href="blog-archive.html">Blog Archive</a></li>
+                              <li><a href="blog_single_post.html">Blog Single</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li> -->
+                      <li class="nosub"><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="side-banner"><img src='{% static "img/images/top-banner.jpg" %}' alt="Flash Sale" class="img-responsive"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-sm-9 col-xs-12 jtv-rhs-header">
+            <div class="jtv-mob-toggle-wrap">
+              <div class="mm-toggle"><i class="fa fa-reorder"></i><span class="mm-label">Menu</span></div>
+            </div>
+            <div class="jtv-header-box">
+              <div class="search_cart_block">
+                <div class="search-box hidden-xs">
+                  <form id="search_mini_form" action="#" method="get">
+                    <input id="search" type="text" name="q" value="" class="searchbox" placeholder="Search entire store here..." maxlength="128">
+                    <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span class="hidden-sm">Search</span><i class="fa fa-search hidden-xs hidden-lg hidden-md"></i></button>
+                  </form>
+                </div>
+                <div class="right_menu">
+                  <div class="menu_top">
+                    <div class="top-cart-contain pull-right">
+                      <div class="mini-cart">
+                        <div class="basket"><a class="basket-icon" href="#"><i class="fa fa-shopping-basket"></i> Shopping Cart <span>3</span></a>
+                          <div class="top-cart-content">
+                            <div class="block-subtitle">
+                              <div class="top-subtotal">3 items, <span class="price">$399.49</span></div>
+                            </div>
+                            <ul class="mini-products-list" id="cart-sidebar">
+                              <li class="item">
+                                <div class="item-inner"><a class="product-image" title="product tilte is here" href="product-detail.html"><img alt="product tilte is here" src='{% static "img/images/products/product-fashion-1.jpg" %}'></a>
+                                  <div class="product-details">
+                                    <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a> </div>
+                                    <p class="product-name"><a href="product-detail.html">Product tilte is here</a></p>
+                                    <strong>1</strong> x <span class="price">$119.99</span></div>
+                                </div>
+                              </li>
+                              <li class="item">
+                                <div class="item-inner"><a class="product-image" title="Product tilte is here" href="product-detail.html"><img alt="Product tilte is here" src='{% static "img/images/products/product-fashion-1.jpg" %]'></a>
+                                  <div class="product-details">
+                                    <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a> </div>
+                                    <p class="product-name"><a href="product-detail.html">Product tilte is here</a></p>
+                                    <strong>1</strong> x <span class="price">$79.66</span></div>
+                                </div>
+                              </li>
+                              <li class="item">
+                                <div class="item-inner"><a class="product-image" title="Product tilte is here" href="product-detail.html"><img alt="Product tilte is here" src='{% static "img/images/products/product-fashion-1.jpg" %}'></a>
+                                  <div class="product-details">
+                                    <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a> </div>
+                                    <p class="product-name"><a href="product-detail.html">Product tilte is here</a></p>
+                                    <strong>1</strong> x <span class="price">$99.89</span></div>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="actions"> <a href="shopping-cart.html" class="view-cart"><span>View Cart</span></a>
+                              <button onclick="window.location.href='checkout.html'" class="btn-checkout" title="Checkout" type="button"><span>Checkout</span></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="language-box hidden-xs">
+                    <select class="selectpicker" data-width="fit">
+                      <option>English</option>
+                      <option>Francais</option>
+                      <option>German</option>
+                      <option>Español</option>
+                    </select>
+                  </div>
+                  <div class="currency-box hidden-xs">
+                    <form class="form-inline">
+                      <div class="input-group">
+                        <div class="currency-addon">
+                          <select class="currency-selector">
+                            <option data-symbol="$">USD</option>
+                            <option data-symbol="€">EUR</option>
+                            <option data-symbol="£">GBP</option>
+                            <option data-symbol="¥">JPY</option>
+                            <option data-symbol="$">CAD</option>
+                            <option data-symbol="$">AUD</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="top_section hidden-xs">
+                <div class="toplinks">
+                  <div class="site-dir hidden-xs"> <a class="hidden-sm" href="#"><i class="fa fa-phone"></i> <strong>Hotline:</strong> +966500057975</a> <a href="mailto:support@example.com"><i class="fa fa-envelope"></i>  Sunmascompany@gmail.com</a> </div>
+                  <ul class="links">
+                    <li><a title="My Account" href="my-account.html">My Account</a></li>
+                    <li><a title="My Wishlist" href="wishlist.html">Wishlist</a></li>
+                    <li><a title="Checkout" href="checkout.html">Checkout</a></li>
+                    <li><a title="Track Order" href="track-order.html">Track Order</a></li>
+                    <!-- <li><a title="Log In" href="login.html">Log In</a></li> -->
+                    <li class="dropdown">
+                      {% if request.user.is_authenticated %}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ request.user.username }}<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{% url 'accounts:logout' %}">logout</a></li>
+                        {% else %}
+                      <li class="divider"></li>
+                      <li><a href="{% url 'accounts:login' %}">Log In</a></li>
+                     <li><a href="{% url 'accounts:signup' %}" >Sign up</a></li>
+                    </ul>
+                     {% endif %}
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header --> 
+    {% block content %}
+
+    {% endblock %} 
+    <!-- Footer -->
+    <footer>
+      <div class="footer-inner">
+        <div class="news-letter"> 
+          <div class="container">
+           <div class="heading text-center">
+              <h2>Just Subscribe Now!</h2>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. Sed feugiat, tellus vel tristique posuere.</span> </div>
+            <form>
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Send me</button>
+            </form> 
+          </div>
+        </div> 
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <h4>About</h4>
+              <div class="contacts-info">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <address>
+                <i class="fa fa-location-arrow"></i> <span>Company  Sun Mas,<br>
+                  Jeddah-Saudi Arabia</span>
+                </address>
+                <div class="phone-footer"><i class="fa fa-phone"></i> +966500057975</div>
+                <div class="email-footer"><i class="fa fa-envelope"></i> <a href="mailto:Sunmascompany@gmail.com">Sunmascompany@gmail.com</a> </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+              <h4>Helpful Links</h4>
+              <ul class="links">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Find a Store</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+              <h4>Shop</h4>
+              <ul class="links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="#">Shipping Methods</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Retailer</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-lg-3 col-md-4 col-sm-6">
+              <div class="social">
+                <h4>Follow Us</h4>
+                <ul>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                  <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                </ul>
+              </div>
+              <div class="payment-accept">
+                <h4>Secure Payment</h4>
+                <div class="payment-icon"><img src='{% static "img/images/paypal.png" %}' alt="paypal"> <img src='{% static "img/images/visa.png" %}' alt="visa"> <img src='{% static "img/images/american-exp.png" %}' alt="american express"> <img src='{% static "img/images/mastercard.png" %}' alt="mastercard"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-xs-12 coppyright text-center">© 2020 Sun Mas, All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+ 
+<!--
+<div class="container">
+    <div class="row" style="margin-top: 6%">
+         <button class="btn btn-info pull-right">
+            {% with totail_items=cart|length %}
+                {% if cart|length > 0 %}
+                    My Shopping Order:
+                    <a href="{% url "cart:cart_detail" %}" style="color: #ffffff">
+                        {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                    </a>
+                    {% else %}
+                    Your cart is empty.
+                {% endif %}
+            {% endwith %}
+         </button>
+    </div>
+</div>  -->
+
+<!-- JavaScript --> 
+<script src='{% static "js/jquery.min.js" %}'></script> 
+<script src='{% static "js/bootstrap.min.js" %}'></script> 
+<script src='{% static "js/revslider.js" %}'></script> 
+<script src='{% static "js/main.js" %}'></script> 
+<script src='{% static "js/owl.carousel.min.js" %}'></script> 
+<script src='{% static "js/mob-menu.js" %}'></script> 
+<script src='{% static "js/countdown.js" %}'></script> 
+<script>
+jQuery(document).ready(function(){
+jQuery('#rev_slider_1').show().revolution({
+dottedOverlay: 'none',
+delay: 5000,
+startwidth: 858,
+startheight: 500,
+
+hideThumbs: 200,
+thumbWidth: 200,
+thumbHeight: 50,
+thumbAmount: 2,
+
+navigationType: 'thumb',
+navigationArrows: 'solo',
+navigationStyle: 'round',
+
+touchenabled: 'on',
+onHoverStop: 'on',
+
+swipe_velocity: 0.7,
+swipe_min_touches: 1,
+swipe_max_touches: 1,
+drag_block_vertical: false,
+
+spinner: 'spinner0',
+keyboardNavigation: 'off',
+
+navigationHAlign: 'center',
+navigationVAlign: 'bottom',
+navigationHOffset: 0,
+navigationVOffset: 20,
+
+soloArrowLeftHalign: 'left',
+soloArrowLeftValign: 'center',
+soloArrowLeftHOffset: 20,
+soloArrowLeftVOffset: 0,
+
+soloArrowRightHalign: 'right',
+soloArrowRightValign: 'center',
+soloArrowRightHOffset: 20,
+soloArrowRightVOffset: 0,
+
+shadow: 0,
+fullWidth: 'on',
+fullScreen: 'off',
+
+stopLoop: 'off',
+stopAfterLoops: -1,
+stopAtSlide: -1,
+
+shuffle: 'off',
+
+autoHeight: 'off',
+forceFullWidth: 'on',
+fullScreenAlignForce: 'off',
+minFullScreenHeight: 0,
+hideNavDelayOnMobile: 1500,
+
+hideThumbsOnMobile: 'off',
+hideBulletsOnMobile: 'off',
+hideArrowsOnMobile: 'off',
+hideThumbsUnderResolution: 0,
+
+hideSliderAtLimit: 0,
+hideCaptionAtLimit: 0,
+hideAllCaptionAtLilmit: 0,
+startWithSlide: 0,
+fullScreenOffsetContainer: ''
+});
+});
+</script> 
+<!-- Hot Deals Timer --> 
+<script>
+var dthen1 = new Date("12/25/17 11:59:00 PM");
+start = "08/04/15 03:02:11 AM";
+start_date = Date.parse(start);
+var dnow1 = new Date(start_date);
+if (CountStepper > 0)
+ddiff = new Date((dnow1) - (dthen1));
+else
+ddiff = new Date((dthen1) - (dnow1));
+gsecs1 = Math.floor(ddiff.valueOf() / 1000);
+
+var iid1 = "countbox_1";
+CountBack_slider(gsecs1, "countbox_1", 1);
+</script>
+
+</body>
+</html> 
