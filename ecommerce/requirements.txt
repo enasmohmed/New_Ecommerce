@@ -21,7 +21,7 @@ django-import-export==2.0.2
 django-js-asset==1.2.2
 django-paypal==1.0.0
 django-weasyprint==0.5.5
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 et-xmlfile==1.0.1
 filelock==3.0.12
 freeze==1.0.10
