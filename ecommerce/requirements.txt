@@ -39,7 +39,7 @@ pipenv==2018.11.26
 pycparser==2.20
 Pyphen==0.9.5
 pytz==2019.3
-PyYAML==5.3
+PyYAML==5.4
 requests==2.23.0
 six==1.14.0
 soupsieve==2.0
