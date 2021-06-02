@@ -46,7 +46,7 @@ soupsieve==2.0
 sqlparse==0.3.0
 tablib==1.1.0
 tinycss2==1.0.2
-urllib3==1.25.8
+urllib3==1.26.5
 virtualenv==16.7.5
 virtualenv-clone==0.5.3
 WeasyPrint==44
