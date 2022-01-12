@@ -35,7 +35,7 @@ openpyxl==3.0.3
 path==13.2.0
 paypal==1.2.5
 Pillow==7.0.0
-pipenv==2018.11.26
+pipenv==2022.1.8
 pycparser==2.20
 Pyphen==0.9.5
 pytz==2019.3
