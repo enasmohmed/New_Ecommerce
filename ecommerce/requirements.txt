@@ -34,7 +34,7 @@ odfpy==1.4.1
 openpyxl==3.0.3
 path==13.2.0
 paypal==1.2.5
-Pillow==7.0.0
+Pillow==9.0.1
 pipenv==2018.11.26
 pycparser==2.20
 Pyphen==0.9.5
